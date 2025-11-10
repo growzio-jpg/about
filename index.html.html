@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us - GROWZIO</title>
+  <meta name="description" content="Learn more about GROWZIO - Your trusted source for premium digital services in Pakistan." />
+  <meta name="keywords" content="about GROWZIO, our story, digital services Pakistan" />
+  <meta name="author" content="GROWZIO">
+  
+  <!-- Use the same styling as the main site -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#81B441',
+            'primary-dark': '#6aa034',
+            secondary: '#A8E063',
+            dark: '#111111',
+            lightbg: '#1A1A1A',
+            'light-text': '#FFFFFF',
+            'border-gray': '#CCCCCC'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <style>
+    /* Global Styles */
+    :root {
+      --primary: #81B441;
+      --primary-dark: #6aa034;
+      --secondary: #A8E063;
+      --dark: #111111;
+      --light-bg: #1A1A1A;
+      --light-text: #FFFFFF;
+      --border-gray: #CCCCCC;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body { 
+      scroll-behavior: smooth; 
+      background-color: var(--dark);
+      color: var(--light-text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    .section {
+      padding: 4rem 0;
+    }
+    
+    .section-title {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    
+    .content-section {
+      background: var(--light-bg);
+      border-radius: 12px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .content-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+    
+    .content-section h3 {
+      color: var(--secondary);
+      margin: 1.5rem 0 1rem 0;
+      font-size: 1.3rem;
+    }
+    
+    .content-section p {
+      margin-bottom: 1rem;
+      color: #CCCCCC;
+    }
+    
+    .content-section ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .content-section li {
+      margin-bottom: 0.5rem;
+      color: #CCCCCC;
+    }
+    
+    .mission-vision {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .mission-card, .vision-card {
+      background: rgba(129, 180, 65, 0.1);
+      border-radius: 12px;
+      padding: 2rem;
+      border-left: 4px solid var(--primary);
+    }
+    
+    .mission-card h3, .vision-card h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    
+    .value-card {
+      background: #2a2a2a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .value-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .value-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .team-member {
+      background: #2a2a2a;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .team-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--primary);
+      margin: 0 auto 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      color: white;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(129, 180, 65, 0.2);
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+    }
+    
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+    
+    @media (max-width: 768px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      
+      .content-section {
+        padding: 1.5rem;
+      }
+      
+      .mission-vision {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-dark text-light-text">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-dark backdrop-blur border-b border-primary">
+    <div class="container py-3 flex items-center justify-between">
+      <a href="index.html" class="font-extrabold text-xl text-white flex items-center">
+        <span class="text-primary mr-1">🔥</span> GROWZIO
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="section">
+    <div class="container">
+      <h1 class="section-title">About GROWZIO</h1>
+      <p class="text-center text-gray-400 max-w-3xl mx-auto mb-8">Your trusted partner for premium digital services in Pakistan</p>
+      
+      <div class="content-section">
+        <h2>Our Story</h2>
+        <p>GROWZIO was founded with a simple mission: to make premium digital services accessible and affordable for everyone in Pakistan. We recognized the growing demand for high-quality digital subscriptions, gaming services, and educational resources, but noticed that many Pakistanis faced barriers such as high international pricing, payment limitations, and complex purchasing processes.</p>
+        
+        <p>Starting as a small venture in 2023, we've grown into a trusted platform serving thousands of satisfied customers across Pakistan. Our commitment to quality, reliability, and customer satisfaction has been the driving force behind our growth.</p>
+        
+        <div class="mission-vision">
+          <div class="mission-card">
+            <h3>Our Mission</h3>
+            <p>To democratize access to premium digital services by providing affordable, reliable, and instant solutions tailored to the needs of Pakistani consumers. We strive to bridge the digital divide by making cutting-edge technology and services accessible to all.</p>
+          </div>
+          
+          <div class="vision-card">
+            <h3>Our Vision</h3>
+            <p>To become Pakistan's most trusted digital services platform, recognized for our commitment to quality, customer satisfaction, and innovation. We envision a future where every Pakistani can easily access and benefit from premium digital experiences.</p>
+          </div>
+        </div>
+        
+        <h2>Why Choose GROWZIO?</h2>
+        
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h3>Instant Delivery</h3>
+            <p>Receive your digital products and services immediately after payment verification.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>100% Genuine</h3>
+            <p>All our services are authentic and sourced from legitimate providers with proper licensing.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Our customer support team is available round the clock to assist you with any issues.</p>
+          </div>
+          
+          <div class="value-card">
+            <div class="value-icon">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>We offer multiple secure payment options including JazzCash, Easypaisa, and Binance.</p>
+          </div>
+        </div>
+        
+        <h2>Our Services</h2>
+        <p>GROWZIO offers a comprehensive range of digital services designed to meet the diverse needs of our customers:</p>
+        
+        <h3>Premium App Subscriptions</h3>
+        <p>Access premium features of popular applications at affordable prices. Our offerings include:</p>
+        <ul>
+          <li>Streaming services (Netflix, Prime Video, etc.)</li>
+          <li>Creative tools (Canva Pro, CapCut Pro, etc.)</li>
+          <li>Productivity software and utilities</li>
+        </ul>
+        
+        <h3>IPTV Services</h3>
+        <p>Enjoy uninterrupted access to thousands of international channels with our reliable IPTV subscriptions.</p>
+        
+        <h3>Gaming Services</h3>
+        <p>Top up your favorite games with in-game currency and items for popular titles like PUBG, Free Fire, and more.</p>
+        
+        <h3>Digital Books & Resources</h3>
+        <p>Access educational and professional development resources to enhance your skills and knowledge.</p>
+        
+        <h2>Our Team</h2>
+        <p>GROWZIO is powered by a dedicated team of professionals passionate about technology and customer service. While we maintain a lean operational structure to keep costs low, our team includes:</p>
+        
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="team-avatar">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <h3>Customer Support</h3>
+            <p>Our support team ensures that every customer receives prompt assistance and satisfactory resolutions to their queries.</p>
+          </div>
+          
+          <div class="team-member">
+            <div class="team-avatar">
+              <i class="fa-solid fa-cogs"></i>
+            </div>
+            <h3>Technical Team</h3>
+            <p>Our technical experts work behind the scenes to ensure service reliability, security, and seamless delivery.</p>
+          </div>
+          
+          <div class="team-member">
+            <div class="team-avatar">
+              <i class="fa-solid fa-handshake"></i>
+            </div>
+            <h3>Partnership Team</h3>
+            <p>We maintain strong relationships with service providers to ensure we offer the best quality products to our customers.</p>
+          </div>
+        </div>
+        
+        <h2>Our Commitment</h2>
+        <p>At GROWZIO, we are committed to:</p>
+        <ul>
+          <li>Providing genuine, high-quality digital services</li>
+          <li>Ensuring prompt and reliable service delivery</li>
+          <li>Offering competitive pricing tailored for the Pakistani market</li>
+          <li>Maintaining transparent and honest business practices</li>
+          <li>Continuously expanding our service offerings based on customer needs</li>
+        </ul>
+        
+        <h2>Contact Us</h2>
+        <p>We value your feedback and are always looking for ways to improve our services. If you have any questions, suggestions, or concerns, please don't hesitate to reach out to us:</p>
+        <ul>
+          <li>WhatsApp: +92 319 5179084</li>
+          <li>Email: growzioteam@gmail.com</li>
+          <li>Business Hours: 24/7 Support Available</li>
+        </ul>
+        
+        <p>Thank you for choosing GROWZIO as your trusted digital services provider. We look forward to serving you!</p>
+      </div>
+      
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-gray-400 py-12 border-t border-primary">
+    <div class="container text-center">
+      <p>© 2025 GROWZIO. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
